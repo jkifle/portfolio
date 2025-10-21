@@ -1,7 +1,8 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Slider from "react-slick";
 import { Element } from "react-scroll";
-
+import ProjectCard from "../components/ProjectCard";
+/* 
 const projects = [
   {
     title: "Symptom Diagnostic Tool",
@@ -31,7 +32,7 @@ const projects = [
       "A real-time light intensity analyzer for frame-based cameras using OpenCV and Python.",
   },
 ];
-
+*/
 export default function Projects() {
   const settings = {
     dots: true,
@@ -137,7 +138,8 @@ export default function Projects() {
         </section>
       </Element>
       <Element name="projects">
-        <section className="px-8 py-20 bg-gray-900 text-white rounded-2xl shadow-lg mb-40">
+        <ProjectCard />
+        {/*         <section className="px-8 py-20 bg-gray-900 text-white rounded-2xl shadow-lg mb-40">
           <h2 className="text-4xl font-bold mb-8 text-center">Projects</h2>
           <Slider {...settings}>
             {projects.map((project, index) => (
@@ -163,7 +165,7 @@ export default function Projects() {
               </div>
             ))}
           </Slider>
-        </section>
+        </section> */}
       </Element>
     </div>
   );
