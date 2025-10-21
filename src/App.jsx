@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
-import About from "./pages/About";
 import Header from "./components/Header";
 
 const App = () => {
@@ -10,8 +9,6 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-
-        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

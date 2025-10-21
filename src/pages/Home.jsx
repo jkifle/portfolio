@@ -1,5 +1,6 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Slider from "react-slick";
+import { Element } from "react-scroll";
 
 const projects = [
   {
@@ -110,56 +111,60 @@ export default function Projects() {
       </section>
 
       {/* About Section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-40 px-8">
-        <div className="flex justify-center items-center">
-          <img
-            src="/headshot2.JPG"
-            alt="Another headshot of Joseph Kifle"
-            className="w-64 h-64 md:w-72 md:h-72 rounded-xl object-cover border-4 border-white shadow-lg"
-          />
-        </div>
+      <Element name="about">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-40 px-8">
+          <div className="flex justify-center items-center">
+            <img
+              src="/headshot2.JPG"
+              alt="Another headshot of Joseph Kifle"
+              className="w-64 h-64 md:w-72 md:h-72 rounded-xl object-cover border-4 border-white shadow-lg"
+            />
+          </div>
 
-        <div className="flex flex-col justify-center">
-          <h2 className="text-3xl font-bold pb-6">About Me</h2>
-          <p className="text-lg md:text-xl leading-relaxed">
-            Joseph Kifle is an aspiring software engineer and emerging
-            technology enthusiast currently pursuing a degree in Computer
-            Engineering at the University of Tennessee, Knoxville. He’s
-            passionate about solving complex problems through innovation — from
-            coding efficient software systems to exploring cutting-edge tools in
-            AI, automation, and data analysis. Joseph combines creativity and
-            technical rigor to design solutions that make technology more
-            intuitive and impactful.
-          </p>
-        </div>
-      </section>
-      <section className="px-8 py-20 bg-gray-900 text-white rounded-2xl shadow-lg mb-40">
-        <h2 className="text-4xl font-bold mb-8 text-center">Projects</h2>
-        <Slider {...settings}>
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center px-6"
-            >
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full md:w-2/3 lg:w-1/2 h-80 object-cover rounded-xl border-4 border-lime-300 shadow-md mx-auto"
-              />
-              <h3 className="text-2xl font-semibold mt-6">{project.title}</h3>
-              <p className="text-gray-300 mt-2 mb-4">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-5 py-2 bg-lime-300 text-slate-800 font-semibold rounded-lg hover:bg-lime-400 transition"
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl font-bold pb-6">About Me</h2>
+            <p className="text-lg md:text-xl leading-relaxed">
+              Joseph Kifle is an aspiring software engineer and emerging
+              technology enthusiast currently pursuing a degree in Computer
+              Engineering at the University of Tennessee, Knoxville. He’s
+              passionate about solving complex problems through innovation —
+              from coding efficient software systems to exploring cutting-edge
+              tools in AI, automation, and data analysis. Joseph combines
+              creativity and technical rigor to design solutions that make
+              technology more intuitive and impactful.
+            </p>
+          </div>
+        </section>
+      </Element>
+      <Element name="projects">
+        <section className="px-8 py-20 bg-gray-900 text-white rounded-2xl shadow-lg mb-40">
+          <h2 className="text-4xl font-bold mb-8 text-center">Projects</h2>
+          <Slider {...settings}>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center px-6"
               >
-                View Project
-              </a>
-            </div>
-          ))}
-        </Slider>
-      </section>
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full md:w-2/3 lg:w-1/2 h-80 object-cover rounded-xl border-4 border-lime-300 shadow-md mx-auto"
+                />
+                <h3 className="text-2xl font-semibold mt-6">{project.title}</h3>
+                <p className="text-gray-300 mt-2 mb-4">{project.description}</p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-5 py-2 bg-lime-300 text-slate-800 font-semibold rounded-lg hover:bg-lime-400 transition"
+                >
+                  View Project
+                </a>
+              </div>
+            ))}
+          </Slider>
+        </section>
+      </Element>
     </div>
   );
 }

@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -12,22 +11,24 @@ const Header = () => {
         </Link>
 
         <ul className="flex gap-4">
-          <Link to="/about">
+          <Link to="about" smooth={true} duration={500}>
             <li className="hidden text-white sm:inline lin hover:opacity-75">
               ABOUT
             </li>
           </Link>
-          <Link to="/skills">
+          {/*
+          <Link to="skills" smooth={true} duration={500}>
             <li className="hidden text-white sm:inline lin hover:opacity-75">
               SKILLS
             </li>
           </Link>
-          <Link to="/education">
+          <Link to="education" smooth={true} duration={500}>
             <li className="hidden text-white sm:inline lin hover:opacity-75">
               EDUCATION
             </li>
           </Link>
-          <Link to="/projects">
+          */}
+          <Link to="projects" smooth={true} duration={500}>
             <li className="hidden text-white sm:inline lin hover:opacity-75">
               PROJECTS
             </li>
