@@ -16,7 +16,7 @@ const projects = [
   {
     title: "PocketWatch",
     img: "/projects/PocketWatch.png",
-    link: "https://personal-expense-tracker-aqjzpxnah-jkifles-projects.vercel.app",
+    link: "https://pocket-watch-expense-tracker-git-main-jkifles-projects.vercel.app/",
     desc: "Pocket Watch is a full-stack personal finance tracker that securely connects to users’ bank accounts via Plaid, automates transaction categorization, and visualizes real-time spending data through an intuitive, responsive interface.",
   },
   {
