@@ -6,7 +6,7 @@ export const EDUCATION = {
   degree: 'B.Sc. Computer Science',
   minor: 'Data Science',
   gpa: '3.73',
-  honors: "Dean's List 2/2",
+  honors: "Dean's List: 2x",
   expected: 'Expected May 2028',
   coursework: ['C++', 'Data Structures & Algorithms', 'Computer Organization', 'Discrete Structures', 'Linear Algebra', 'Probability & Random Variables'],
 };
@@ -21,7 +21,7 @@ export const PERSONAL = {
   github: 'https://github.com/jkifle',
   title: 'Software Engineer & Researcher',
   tagline: 'EXCITED FOR #NSBE2026',
-  bio1: `Computer Science student at the University of Tennessee, Knoxville (GPA ${EDUCATION.gpa}) with hands-on production experience shipping features at Nexus, conducting research with UTK, and building civic tech through Hack4Impact.`,
+  bio1: `Computer Science student at the University of Tennessee, Knoxville with hands-on production experience shipping features at Nexus, conducting research with UTK, and building civic tech through Hack4Impact.`,
   bio2: `I specialize in full-stack web development, data pipelines, and applied ML — with a track record of turning ambiguous problems into clean, measurable solutions.`,
 };
 
@@ -217,10 +217,10 @@ export const HONORS = [
 
 // ─── LEADERSHIP ──────────────────────────────────────────────────────────────
 export const LEADERSHIP = [
-  { role: 'President & Founder', org: 'Students of East Africa (SEA)', period: 'Sep 2025 – Present' },
+  { role: 'Founder', org: 'Students of East Africa (SEA)', period: 'Oct 2025 – Present' },
   { role: 'Region III Secretary & PR Chair', org: 'NSBE', period: 'Jun 2025 – Present' },
   { role: 'Programs Chair', org: 'NSBE UTK Chapter', period: 'Mar 2025 – Present' },
   { role: 'Treasurer', org: 'NAACP UTK', period: 'May 2025 – Present' },
   { role: 'Events Planning Chair', org: 'Brothers United for Excellence', period: 'May 2025 – Present' },
-  { role: 'Freshman Liaison & Comms Chair', org: 'NSBE UTK', period: 'Aug 2024 – May 2025' },
+  // { role: 'Freshman Liaison & Comms Chair', org: 'NSBE UTK', period: 'Aug 2024 – May 2025' },
 ];
