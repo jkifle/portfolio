@@ -7,8 +7,23 @@ const NAV_LINKS = [
   { index: '04', label: 'Contact', href: '#contact' },
 ];
 
+// SVG placeholder — shown until real logo loads
+function LogoPlaceholder() {
+  return (
+    <div style={{ width: '32px', height: '32px', backgroundColor: 'var(--forest)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <rect x="2" y="2" width="5" height="5" fill="white" />
+        <rect x="9" y="2" width="5" height="5" fill="white" opacity="0.5" />
+        <rect x="2" y="9" width="5" height="5" fill="white" opacity="0.5" />
+        <rect x="9" y="9" width="5" height="5" fill="white" />
+      </svg>
+    </div>
+  );
+}
+
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled]     = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -27,22 +42,42 @@ export default function Navigation() {
       transition: 'background 0.2s linear',
     }}>
       {/* Logo */}
-      <a href="#hero" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <div style={{ width: '32px', height: '32px', backgroundColor: 'var(--forest)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <rect x="2" y="2" width="5" height="5" fill="white" />
-            <rect x="9" y="2" width="5" height="5" fill="white" opacity="0.5" />
-            <rect x="2" y="9" width="5" height="5" fill="white" opacity="0.5" />
-            <rect x="9" y="9" width="5" height="5" fill="white" />
-          </svg>
+      <a href="#hero" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+
+        {/* Real logo — hidden until loaded, placeholder shown beneath */}
+        <div style={{ position: 'relative', width: '32px', height: '32px', flexShrink: 0 }}>
+          {/* Placeholder always mounted, fades out once real logo is ready */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            opacity: logoLoaded ? 0 : 1,
+            transition: 'opacity 0.2s linear',
+          }}>
+            <LogoPlaceholder />
+          </div>
+
+          {/* Real logo image */}
+          <img
+            src="/images/logo.png"
+            alt="Joseph Kifle logo"
+            onLoad={() => setLogoLoaded(true)}
+            onError={() => setLogoLoaded(false)}
+            style={{
+              position: 'absolute', inset: 0,
+              width: '32px', height: '32px',
+              objectFit: 'contain',
+              opacity: logoLoaded ? 1 : 0,
+              transition: 'opacity 0.2s linear',
+            }}
+          />
         </div>
+
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--forest)' }}>
           Joseph Kifle
         </span>
       </a>
 
-      {/* Center nav */}
-      <nav style={{ display: 'flex', alignItems: 'center', gap: '32px', margin: '0 auto' }}>
+      {/* Center nav — hidden on mobile via CSS */}
+      <nav className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '32px', margin: '0 auto' }}>
         {NAV_LINKS.map(({ index, label, href }) => (
           <a key={index} href={href} style={{
             fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.12em',
@@ -59,10 +94,14 @@ export default function Navigation() {
 
       {/* Right actions */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginLeft: 'auto' }}>
-        <a href="https://linkedin.com/in/josephkifle" target="_blank" rel="noreferrer" className="btn-ghost" style={{ padding: '6px 14px', fontSize: '10px' }}>
+        <a href="https://linkedin.com/in/josephkifle" target="_blank" rel="noreferrer"
+          className="btn-ghost nav-cta-secondary"
+          style={{ padding: '6px 14px', fontSize: '10px' }}>
           LinkedIn ↗
         </a>
-        <a href="https://github.com/jkifle" target="_blank" rel="noreferrer" className="btn-solid" style={{ padding: '6px 14px', fontSize: '10px' }}>
+        <a href="https://github.com/jkifle" target="_blank" rel="noreferrer"
+          className="btn-solid"
+          style={{ padding: '6px 14px', fontSize: '10px' }}>
           GitHub ↗
         </a>
       </div>
