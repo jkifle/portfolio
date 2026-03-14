@@ -1,17 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import { Navigation, Footer } from './components/layout';
+import { Hero, About, Work, Skills, Contact } from './components/sections';
+import './styles/globals.css';
 
-import Header from "./components/Header";
-
-const App = () => {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
+    <>
+      {/* Mosaic background — fixed layer */}
+      <div className="mosaic-bg" />
 
-export default App;
+      {/* Navigation */}
+      <Navigation />
+
+      {/* Main content */}
+      <main className="content-layer">
+        <Hero />
+        <About />
+        <Work />
+        <Skills />
+        <Contact />
+      </main>
+
+      <Footer />
+    </>
+  );
+}
