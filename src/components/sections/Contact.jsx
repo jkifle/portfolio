@@ -9,7 +9,7 @@ const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const formRef = useRef(null);
-  const [form, setForm]       = useState({ name: '', email: '', project_type: '', message: '' });
+  const [form, setForm]       = useState({ from_name: '', from_email: '', project_type: '', message: '' });
   const [status, setStatus]   = useState('idle'); // idle | sending | success | error
 
   const handleChange = (e) => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -21,7 +21,7 @@ export default function Contact() {
     try {
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, { publicKey: PUBLIC_KEY });
       setStatus('success');
-      setForm({ name: '', email: '', project_type: '', message: '' });
+      setForm({ from_name: '', from_email: '', project_type: '', message: '' });
     } catch (err) {
       console.error('EmailJS error:', err);
       setStatus('error');
@@ -124,16 +124,16 @@ export default function Contact() {
                   <div>
                     <label className="form-label">Name</label>
                     <input
-                      className="form-input" type="text" name="name"
-                      placeholder="Jane Smith" value={form.name}
+                      className="form-input" type="text" name="from_name"
+                      placeholder="Jane Smith" value={form.from_name}
                       onChange={handleChange} required
                     />
                   </div>
                   <div>
                     <label className="form-label">Email</label>
                     <input
-                      className="form-input" type="email" name="email"
-                      placeholder="jane@company.com" value={form.email}
+                      className="form-input" type="email" name="from_email"
+                      placeholder="jane@company.com" value={form.from_email}
                       onChange={handleChange} required
                     />
                   </div>
@@ -142,9 +142,9 @@ export default function Contact() {
                 <div style={{ marginBottom: '16px' }}>
                   <label className="form-label">Opportunity Type</label>
                   <input
-                    className="form-input" type="text" name="project"
+                    className="form-input" type="text" name="project_type"
                     placeholder="Internship, freelance, research, full-time..."
-                    value={form.project} onChange={handleChange}
+                    value={form.project_type} onChange={handleChange}
                   />
                 </div>
 
