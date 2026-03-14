@@ -95,7 +95,7 @@ export default function Navigation() {
       {/* Right actions */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginLeft: 'auto' }}>
         <a href="https://linkedin.com/in/josephkifle" target="_blank" rel="noreferrer"
-          className="btn-ghost nav-cta-secondary"
+          className="btn-ghost"
           style={{ padding: '6px 14px', fontSize: '10px' }}>
           LinkedIn ↗
         </a>
