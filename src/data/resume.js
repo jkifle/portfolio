@@ -1,13 +1,13 @@
 
 // ─── EDUCATION ───────────────────────────────────────────────────────────────
 export const EDUCATION = {
-  school: 'University of Tennessee, Knoxville',
+  school: 'The University of Tennessee, Knoxville',
   college: 'Tickle College of Engineering',
-  degree: 'B.Sc. Computer Science',
-  minor: 'Data Science',
-  gpa: '3.73',
-  honors: "Dean's List: 2x",
-  expected: 'Expected May 2028',
+  degree: 'Bachelor of Science in Computer Science',
+  minor: 'Business Administration',
+  gpa: '3.68',
+  honors: 'Cook Grand Challenge; Deloitte Foundation Scholarship (2×); James Moreland Scholarship; Global Citizens Scholar',
+  expected: 'Graduation: May 2028',
   coursework: ['C++', 'Data Structures & Algorithms', 'Computer Organization', 'Discrete Structures', 'Linear Algebra', 'Probability & Random Variables'],
 };
 
@@ -17,10 +17,11 @@ export const PERSONAL = {
   location: 'Clarksville, TN',
   email: 'kifle.joe@gmail.com',
   phone: '(931) 539-0384',
-  linkedin: 'https://www.linkedin.com/in/josephkifle',
+  linkedin: 'http://www.linkedin.com/in/josephkifle',
+  website: 'https://josephkifle.onrender.com',
   github: 'https://github.com/jkifle',
   title: 'Software Engineer & Researcher',
-  tagline: 'EXCITED FOR #NSBE2026',
+  tagline: '',
   bio1: `Computer Science student at the University of Tennessee, Knoxville with hands-on production experience shipping features at Nexus, conducting research with UTK, and building civic tech through Hack4Impact.`,
   bio2: `I specialize in full-stack web development, data pipelines, and applied ML — with a track record of turning ambiguous problems into clean, measurable solutions.`,
 };
@@ -29,8 +30,8 @@ export const PERSONAL = {
 // ─── CERTIFICATIONS ──────────────────────────────────────────────────────────
 export const CERTIFICATIONS = [
   { label: 'Google IT Automation with Python', status: 'Completed' },
-  { label: 'IBM Machine Learning', status: 'In Progress' },
-  { label: 'Google Project Management', status: 'In Progress' },
+  { label: 'Google Project Management', status: 'Completed' },
+  { label: 'IBM Machine Learning (Summer 2026)', status: 'Completed' },
 ];
 
 // ─── SKILLS ──────────────────────────────────────────────────────────────────
@@ -39,21 +40,21 @@ export const SKILL_CATEGORIES = [
     id: 'S01',
     label: 'Languages',
     accent: 'var(--coral)',
-    skills: ['Python', 'JavaScript', 'C++', 'C#', 'SQL', 'Assembly', 'Lua', 'HTML'],
+    skills: ['Java', 'C++', 'Python', 'JavaScript', 'C', 'SQL', 'Lua'],
     level: 90,
   },
   {
     id: 'S02',
     label: 'Frameworks & Tools',
     accent: 'var(--mint)',
-    skills: ['React', 'Node.js', 'Firebase', 'MongoDB', 'PyTorch', 'Scikit-Learn', 'Tailwind', 'Flask'],
+    skills: ['Firebase', 'MongoDB', 'Firestore', 'Node.js', 'Scikit-Learn', 'PyTorch', 'Tailwind', 'Flask', 'Render', 'PostgreSQL'],
     level: 88,
   },
   {
     id: 'S03',
     label: 'Developer Tooling',
     accent: 'var(--gold)',
-    skills: ['GitHub', 'VS Code', 'Jira', 'AutoCAD', 'Jupyter', 'VIM', 'Linux', 'Bash'],
+    skills: ['Jira', 'GitHub', 'VS Code', 'Jupyter', 'VIM', 'AutoCAD', 'Azure DevOps'],
     level: 82,
   },
   {
@@ -69,15 +70,30 @@ export const SKILL_CATEGORIES = [
 export const EXPERIENCE = [
   {
     year: '2026',
+    role: 'IT Retail Systems Intern',
+    company: 'Tractor Supply Co.',
+    location: 'Brentwood, TN',
+    type: 'work',
+    current: true,
+    period: 'June 2026 – Present',
+    bullets: [
+      'Reduced annual operational effort by an estimated ~469 hours (~$45.9K in recurring labor savings).',
+      'Developed an internal tool automating a manual SQL-based deployment process, decreasing activation time by 99.7%.',
+      'Implemented a PL/SQL-based cron job to standardize data formatting, eliminating failures and improving reliability across a 2,400+ store network.',
+    ],
+  },
+  {
+    year: '2026',
     role: 'Software Engineering Intern',
     company: 'Nexus',
     location: 'Knoxville, TN',
     type: 'work',
-    current: true,
+    current: false,
+    period: 'January 2026 – May 2026',
     bullets: [
-      "Submitted 15+ PRs in a high-velocity Agile environment, achieving 100% documentation coverage for new installation procedures.",
-      "Engineered a Merged Dashboards feature using JavaScript and a decoupled parent-bridge architecture for thousands of users.",
-      "Architected an in-house LiteLLM middleware in Python, reducing annual enterprise AI API overhead by $30,000.",
+      'Collaborated with senior engineers to submit 25+ Pull Requests focused on feature parity and bug resolution, and ensured 100% documentation of new installation procedures.',
+      'Engineered and deployed a live Merged Dashboards feature using JavaScript and a decoupled parent-bridge architecture to streamline data visualization for thousands of active users.',
+      'Architected a multi-model LLM execution engine, replacing OpenAI Assistants API with multi-model routing, cutting annual enterprise API overhead by $30K across a product line serving 1,000+ schools.',
     ],
   },
   {
@@ -86,36 +102,12 @@ export const EXPERIENCE = [
     company: 'University of Tennessee, Knoxville',
     location: 'Knoxville, TN',
     type: 'research',
-    current: true,
-    bullets: [
-      "Building a React + D3.js dashboard to visualize 3D performance trade-offs (power, speed, leakage) for cryogenic workloads.",
-      "Architecting a Firebase/MongoDB backend for large-scale SPICE simulation results.",
-      "Selected to present at EUReCA Exhibition; contributing to a forthcoming HPC paper.",
-    ],
-  },
-  {
-    year: '2025',
-    role: 'Software Developer',
-    company: 'Hack4Impact',
-    location: 'Knoxville, TN',
-    type: 'work',
-    current: true,
-    bullets: [
-      "Built a web app for Thrive in Knoxville using Python/Django and React to support youth mentoring programs.",
-      "Delivered scalable backend systems and user-friendly interfaces, improving engagement and program efficiency.",
-    ],
-  },
-  {
-    year: '2025',
-    role: 'Research Assistant',
-    company: 'Middle Tennessee State University',
-    location: 'Murfreesboro, TN',
-    type: 'research',
     current: false,
+    period: 'February 2026 – May 2026',
     bullets: [
-      "Built a Python RGB pixel intensity pipeline with OpenCV/NumPy, achieving >95% accuracy estimating plasma surface temperature.",
-      "Reduced manual analysis time by 70% via automated validation scripts and an 8TB+ file compression pipeline.",
-      "Applied Stefan–Boltzmann and Wien's Displacement Laws to translate raw experimental data into quantifiable insights.",
+      'Building an interactive web dashboard using React and D3.js to visualize 3D performance trade-offs (power, speed, leakage) for cryogenic workloads.',
+      'Architecting a Firebase/MongoDB backend to store and retrieve large-scale simulation results to facilitate comparative analyses.',
+      'Selected to present research findings at the EUReCA Exhibition and contributing to a forthcoming paper on SPICE-derived models for cooling strategies in high-performance computing.',
     ],
   },
 ];
@@ -207,20 +199,15 @@ export const PROJECTS = [
 
 // ─── HONORS ──────────────────────────────────────────────────────────────────
 export const HONORS = [
-  { award: 'Above and Beyond Award', org: 'NSBE' },
+  { award: 'Cook Grand Challenge', org: 'Tickle College of Engineering' },
   { award: 'Deloitte Foundation Scholarship (2×)', org: 'Deloitte Foundation' },
-  { award: 'Rocky Top Presidents Institute', org: 'University of Tennessee' },
-  { award: 'Cook Grand Challenge Honors Program', org: 'Tickle College of Engineering' },
   { award: 'James Moreland Scholarship', org: 'Tickle College of Engineering' },
-  { award: 'Intellichoice Scholarship', org: 'Intellichoice Inc.' },
+  { award: 'Global Citizens Scholar', org: 'University of Tennessee' },
 ];
 
 // ─── LEADERSHIP ──────────────────────────────────────────────────────────────
 export const LEADERSHIP = [
-  { role: 'Founder', org: 'Students of East Africa (SEA)', period: 'Oct 2025 – Present' },
-  { role: 'Region III Secretary & PR Chair', org: 'NSBE', period: 'Jun 2025 – Present' },
-  { role: 'Programs Chair', org: 'NSBE UTK Chapter', period: 'Mar 2025 – Present' },
-  { role: 'Treasurer', org: 'NAACP UTK', period: 'May 2025 – Present' },
-  { role: 'Events Planning Chair', org: 'Brothers United for Excellence', period: 'May 2025 – Present' },
-  // { role: 'Freshman Liaison & Comms Chair', org: 'NSBE UTK', period: 'Aug 2024 – May 2025' },
+  { role: 'Career Prep Fellow', org: 'Management Leadership for Tomorrow', period: 'Jan 2026 – Present' },
+  { role: 'Founder & President', org: 'Students of East Africa', period: 'Oct 2025 – May 2026' },
+  { role: 'Region III Secretary & Public Relations Chair', org: 'National Society of Black Engineers', period: 'Jun 2025 – May 2026' },
 ];
