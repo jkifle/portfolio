@@ -44,7 +44,7 @@ export default function Footer() {
             />
           </div>
 
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', opacity: 0.5 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', color: 'var(--forest)' }}>
             © {year} {PERSONAL.name}
           </span>
         </div>
@@ -57,14 +57,14 @@ export default function Footer() {
           ].map(link => (
             <a key={link.label} href={link.href}
               target={link.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', color: 'var(--forest)', opacity: 0.45, transition: 'opacity 0.15s' }}
-              onMouseEnter={e => e.target.style.opacity = 1}
-              onMouseLeave={e => e.target.style.opacity = 0.45}
+              style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', color: 'var(--forest)', transition: 'opacity 0.15s' }}
+              onMouseEnter={e => e.target.style.opacity = 0.9}
+              onMouseLeave={e => e.target.style.opacity = 1}
             >{link.label}</a>
           ))}
         </div>
 
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', opacity: 0.4, letterSpacing: '0.08em' }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--forest)', letterSpacing: '0.08em' }}>
           Built with React + Vite
         </span>
       </div>

@@ -92,7 +92,6 @@ body {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--forest);
-  opacity: 0.6;
 }
 
 .text-mono-sm {
@@ -235,7 +234,8 @@ body {
 }
 
 .form-input::placeholder {
-  color: rgba(26, 60, 43, 0.35);
+  /* increased contrast for accessibility */
+  color: rgba(26, 60, 43, 0.65);
 }
 
 .form-input:focus {

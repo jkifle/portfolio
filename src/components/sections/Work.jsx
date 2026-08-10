@@ -13,7 +13,7 @@ function ProjectCard({ project }) {
           </span>
         </div>
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.1em', opacity: 0.4 }}>{project.year}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.1em', color: 'var(--forest)' }}>{project.year}</span>
           <div style={{ padding: '2px 8px', border: '1px solid var(--border)', fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
             {project.status}
           </div>
@@ -23,14 +23,14 @@ function ProjectCard({ project }) {
       <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 2vw, 22px)', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: '10px', lineHeight: '1.1' }}>
         {project.title}
       </h3>
-      <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', lineHeight: '1.65', opacity: 0.6, marginBottom: '20px' }}>
+      <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', lineHeight: '1.65', marginBottom: '20px', color: 'var(--forest)' }}>
         {project.description}
       </p>
 
       <div style={{ border: '1px solid var(--border)', padding: '14px', backgroundColor: 'rgba(26,60,43,0.03)', marginBottom: '20px' }}>
         {project.mockup.lines.map((line, i) => (
           <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: i < project.mockup.lines.length - 1 ? '8px' : '0' }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', opacity: 0.55 }}>{line.label}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--forest)' }}>{line.label}</span>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: line.color, fontWeight: '600' }}>{line.value}</span>
           </div>
         ))}

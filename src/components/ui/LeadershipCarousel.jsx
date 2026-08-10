@@ -125,10 +125,10 @@ export default function LeadershipCarousel() {
               fontSize: '9px',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              opacity: 0.45,
-              whiteSpace: 'nowrap',
-              padding: '2px 8px',
-              border: '1px solid var(--border)',
+            whiteSpace: 'nowrap',
+            padding: '2px 8px',
+            border: '1px solid var(--border)',
+            color: 'var(--forest)'
             }}>
               {item.role.split(' ').slice(0, 2).join(' ')}
             </div>

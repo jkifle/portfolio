@@ -42,7 +42,7 @@ export default function Contact() {
             <span style={{ color: 'var(--coral)' }}>great together.</span>
           </h2>
 
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: '1.75', opacity: 0.65, marginBottom: '48px' }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: '1.75', marginBottom: '48px', color: 'var(--forest)' }}>
             I&apos;m currently available for internships, research roles, and freelance projects. Response time is typically under 24 hours.
           </p>
 
@@ -61,12 +61,12 @@ export default function Contact() {
                   onMouseLeave={e => e.currentTarget.style.paddingLeft = '0px'}
                 >
                   <span className="text-section-label">{item.label}</span>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--forest)', opacity: 0.7 }}>{item.value} →</span>
+                                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--forest)' }}>{item.value} →</span>
                 </a>
               ) : (
                 <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', padding: '16px 0', borderBottom: '1px solid var(--border)' }}>
                   <span className="text-section-label">{item.label}</span>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', opacity: 0.5 }}>{item.value}</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--forest)' }}>{item.value}</span>
                 </div>
               )
             ))}

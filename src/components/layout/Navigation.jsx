@@ -82,12 +82,12 @@ export default function Navigation() {
           <a key={index} href={href} style={{
             fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.12em',
             textTransform: 'uppercase', color: 'var(--forest)', textDecoration: 'none',
-            opacity: 0.65, transition: 'opacity 0.15s linear',
+            transition: 'opacity 0.15s linear',
           }}
-          onMouseEnter={e => e.target.style.opacity = 1}
-          onMouseLeave={e => e.target.style.opacity = 0.65}
+          onMouseEnter={e => e.target.style.textDecoration = 'underline'}
+          onMouseLeave={e => e.target.style.textDecoration = 'none'}
           >
-            <span style={{ opacity: 0.45 }}>{index}.&nbsp;</span>{label}
+            <span style={{ color: 'var(--forest)' }}>{index}.&nbsp;</span>{label}
           </a>
         ))}
       </nav>

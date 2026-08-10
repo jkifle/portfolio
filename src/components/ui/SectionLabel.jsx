@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 export default function SectionLabel({ index, label }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '48px' }}>
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', opacity: 0.35, letterSpacing: '0.1em' }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', color: 'var(--forest)' }}>
         {index}
       </span>
       <div style={{ width: '32px', height: '1px', backgroundColor: 'var(--forest)', opacity: 0.3 }} />

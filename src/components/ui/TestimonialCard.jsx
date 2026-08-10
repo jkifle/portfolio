@@ -31,7 +31,6 @@ export default function TestimonialCard({ quote, name, title, initials }) {
         fontSize: '12px',
         lineHeight: '1.6',
         color: 'var(--forest)',
-        opacity: 0.8,
         flex: 1,
       }}>
         &quot;{quote}&quot;
@@ -56,10 +55,10 @@ export default function TestimonialCard({ quote, name, title, initials }) {
           </span>
         </div>
         <div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: '600', letterSpacing: '0.08em' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: '600', letterSpacing: '0.08em', color: 'var(--forest)' }}>
             {name}
           </div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', opacity: 0.5, letterSpacing: '0.06em' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em', color: 'var(--forest)' }}>
             {title}
           </div>
         </div>

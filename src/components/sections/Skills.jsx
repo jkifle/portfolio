@@ -8,14 +8,14 @@ function SkillCell({ category }) {
     <div className="bento-cell">
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '24px' }}>
         <div style={{ width: '3px', height: '18px', backgroundColor: category.accent, flexShrink: 0 }} />
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', opacity: 0.5 }}>{category.id}</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--forest)' }}>{category.id}</span>
       </div>
       <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(16px, 2vw, 20px)', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: '20px' }}>
         {category.label}
       </h3>
       <div style={{ marginBottom: '20px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', opacity: 0.4, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Proficiency</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--forest)' }}>Proficiency</span>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: category.accent, fontWeight: '600' }}>{category.level}%</span>
         </div>
         <div style={{ height: '2px', backgroundColor: 'rgba(26,60,43,0.1)' }}>
@@ -74,9 +74,9 @@ export default function Skills() {
             <div key={i} className="exp-row">
               {/* Left metadata */}
               <div>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', opacity: 0.4, letterSpacing: '0.1em', marginBottom: '8px' }}>{exp.year}</div>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', marginBottom: '8px', color: 'var(--forest)' }}>{exp.year}</div>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>{exp.company}</div>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', opacity: 0.5, marginBottom: '12px' }}>{exp.location}</div>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', marginBottom: '12px', color: 'var(--forest)' }}>{exp.location}</div>
                 {exp.current && (
                   <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '3px 8px', border: '1px solid var(--mint)' }}>
                     <div style={{ width: '5px', height: '5px', backgroundColor: 'var(--mint)', flexShrink: 0 }} />
@@ -90,8 +90,8 @@ export default function Skills() {
                 <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {exp.bullets.map((b, j) => (
                     <li key={j} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                      <div style={{ width: '4px', height: '4px', backgroundColor: 'var(--forest)', opacity: 0.4, marginTop: '7px', flexShrink: 0 }} />
-                      <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: '1.65', opacity: 0.75 }}>{b}</span>
+                      <div style={{ width: '4px', height: '4px', backgroundColor: 'var(--forest)', marginTop: '7px', flexShrink: 0 }} />
+                      <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: '1.65', color: 'var(--forest)' }}>{b}</span>
                     </li>
                   ))}
                 </ul>

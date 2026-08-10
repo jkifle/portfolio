@@ -28,10 +28,10 @@ export default function About() {
 
           {/* Bio */}
           <div>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: '1.75', opacity: 0.7, marginBottom: '16px' }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: '1.75', marginBottom: '16px', color: 'var(--forest)' }}>
               {PERSONAL.bio1}
             </p>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: '1.75', opacity: 0.7 }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: '1.75', color: 'var(--forest)' }}>
               {PERSONAL.bio2}
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function About() {
           <div style={{ fontFamily: 'var(--font-display)', fontSize: '15px', fontWeight: '700', marginBottom: '3px' }}>
             {EDUCATION.school}
           </div>
-          <div style={{ fontFamily: 'var(--font-body)', fontSize: '13px', opacity: 0.6, marginBottom: '14px' }}>
+          <div style={{ fontFamily: 'var(--font-body)', fontSize: '13px', marginBottom: '14px', color: 'var(--forest)' }}>
             {EDUCATION.degree} · Minor: {EDUCATION.minor}
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
@@ -58,11 +58,11 @@ export default function About() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--gold)', flexShrink: 0 }} />
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', opacity: 0.7 }}>{EDUCATION.honors}</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--forest)' }}>{EDUCATION.honors}</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--coral)', flexShrink: 0 }} />
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', opacity: 0.7 }}>{EDUCATION.expected}</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--forest)' }}>{EDUCATION.expected}</span>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function About() {
                 borderBottom: i < HONORS.length - 1 ? '1px solid var(--border)' : 'none',
               }}>
                 <span style={{ fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: '500' }}>{h.award}</span>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', opacity: 0.4, letterSpacing: '0.06em', flexShrink: 0 }}>{h.org}</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--forest)', letterSpacing: '0.06em', flexShrink: 0 }}>{h.org}</span>
               </div>
             ))}
           </div>
